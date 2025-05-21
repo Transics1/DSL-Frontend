@@ -18,7 +18,7 @@ export default function AdminPanel() {
 
   const fetchApplications = async () => {
     try {
-      const res = await axios.get("/api/admin/applications", {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/admin/applications`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setApplications(res.data);
@@ -34,7 +34,7 @@ export default function AdminPanel() {
 
   const handlePdfDownload = async (appId) => {
     try {
-      const response = await axios.get(`/api/admin/application/pdf/${appId}`, {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/admin/application/pdf/${appId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

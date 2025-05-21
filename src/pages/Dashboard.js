@@ -121,7 +121,7 @@ export default function ApplicationForm() {
           return;
         }
 
-        const response = await axios.get("/api/application/me", {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/application/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -379,7 +379,7 @@ export default function ApplicationForm() {
         );
       }
 
-      const response = await axios.post("/api/application/submit", formData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/application/submit`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem("token")}`,

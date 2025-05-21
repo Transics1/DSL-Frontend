@@ -12,7 +12,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/auth/register', { email, password });
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, { email, password });
       window.location = '/';
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
