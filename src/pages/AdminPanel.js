@@ -140,7 +140,7 @@ export default function AdminPanel() {
                     </button>
                     {app.general.photo && (
                       <a
-                        href={`http://localhost:5000/${app.general.photo}`}
+                        href={`${process.env.REACT_APP_API_URL}/${app.general.photo}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-secondary"
@@ -150,7 +150,7 @@ export default function AdminPanel() {
                     )}
                     {app.signature && (
                       <a
-                        href={`http://localhost:5000/${app.signature}`}
+                        href={`${process.env.REACT_APP_API_URL}/${app.signature}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-secondary"
@@ -181,7 +181,7 @@ export default function AdminPanel() {
                             </p>
                             {edu.document && (
                               <a
-                                href={`http://localhost:5000/${edu.document}`}
+                                href={`${process.env.REACT_APP_API_URL}/${edu.document}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-secondary"
@@ -200,7 +200,7 @@ export default function AdminPanel() {
                             </p>
                             {ach.document && (
                               <a
-                                href={`http://localhost:5000/${ach.document}`}
+                                href={`${process.env.REACT_APP_API_URL}/${ach.document}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-secondary"
